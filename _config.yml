@@ -1,0 +1,18 @@
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://lvyafei.github.io/design" # the base hostname & protocol for your site
+# Build settings
+markdown: kramdown
+
+# 代码高亮
+highlhter: pygments
+pygments: true 
+
+# 文章摘要
+excerpt_separator: "<!-- more -->"
+
+# discus
+comments :
+    provider : duoshuo
+    duoshuo : 
+      short_name : lvyafei
