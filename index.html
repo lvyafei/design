@@ -20,7 +20,24 @@
     </section>
 
     <section class="main-content">
-      
+      <div class="row">
+    {% for post in site.posts %}
+      <div class="well well-lg">
+        {% if post.categories != empty %}
+        <span class="post-meta"><i class="glyphicon glyphicon-paperclip"></i> {{ post.categories }}</span>
+        {% endif %}
+        {% if post.tags != empty %}
+        <span class="post-meta"><i class="glyphicon glyphicon-tag"></i> {{ post.tags }}</span>
+        {% endif %}
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <span>{{ post.excerpt | replace: '<ul id="meuid">' , '<ul id="meuid" style="display:none">' | remove: '<img>' }}
+        </span>
+        <span class="post-meta" style="float:right">{{ post.date | date: "%m -%d -%Y" }}</span>
+      </div>
+    {% endfor %}
+   </div>
       <footer class="site-footer">
         <span class="site-footer-owner">本站点是作者的设计作品第一发布点，设计思想均来自lvyafei的个人原创。欢迎交流学习，如果你想交流有关技术方面的内容，请访问作者的<a href="http://lvyafei.github.io/">官方博客</a></span>
        
