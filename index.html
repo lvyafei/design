@@ -1,51 +1,31 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>lvyafei-设计之都</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <script src="http://libs.useso.com/js/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Design</h1>
-      <h2 class="project-tagline">个人设计作品</h2>
-      <a href="https://github.com/lvyafei/design" class="btn">
-        <img src="/design/images/促销海报/促销海报.png"><br/>
-        <span>促销海报</span>
-      </a>
-    </section>
+---
+layout: default
+published: true
+---
 
-    <section class="main-content">
-      <div>
-        {% for post in site.posts %}
-          <div class="well well-lg">
-            {% if post.categories != empty %}
-            <span class="post-meta"><i class="glyphicon glyphicon-paperclip"></i> {{ post.categories }}</span>
-            {% endif %}
-            {% if post.tags != empty %}
-            <span class="post-meta"><i class="glyphicon glyphicon-tag"></i> {{ post.tags }}</span>
-            {% endif %}
-            <h2>
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2>
-            <span>{{ post.excerpt | replace: '<ul id="meuid">' , '<ul id="meuid" style="display:none">' | remove: '<img>' }}
-            </span>
-            <span class="post-meta" style="float:right">{{ post.date | date: "%m -%d -%Y" }}</span>
-          </div>
-        {% endfor %}
+<div class="home container">
+  <h1 class="project-name">Design</h1>
+  <h2 class="project-tagline">个人设计作品</h2>
+  <a href="https://github.com/lvyafei/design" class="btn">
+    <img src="/design/images/促销海报/促销海报.png"><br/>
+    <span>促销海报</span>
+  </a>
+  <div>
+    {% for post in site.posts %}
+      <div class="well well-lg">
+        {% if post.categories != empty %}
+        <span class="post-meta"><i class="glyphicon glyphicon-paperclip"></i> {{ post.categories }}</span>
+        {% endif %}
+        {% if post.tags != empty %}
+        <span class="post-meta"><i class="glyphicon glyphicon-tag"></i> {{ post.tags }}</span>
+        {% endif %}
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <span>{{ post.excerpt | replace: '<ul id="meuid">' , '<ul id="meuid" style="display:none">' | remove: '<img>' }}
+        </span>
+        <span class="post-meta" style="float:right">{{ post.date | date: "%m -%d -%Y" }}</span>
       </div>
-      <footer class="site-footer">
-        <span class="site-footer-owner">本站点是作者的设计作品第一发布点，设计思想均来自lvyafei的个人原创。欢迎交流学习，如果你想交流有关技术方面的内容，请访问作者的<a href="http://lvyafei.github.io/">官方博客</a></span>
-       
-      </footer>
-
-    </section>
-
-  
-  </body>
-</html>
+    {% endfor %}
+  </div>
+</div>
