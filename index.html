@@ -15,7 +15,7 @@ published: true
   <section class="main-content">
       <div>
         {% for post in site.posts %}
-          <div class="well well-lg">
+          <div>
             <h2>
               <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
               <span class="post-meta" style="float:right">{{ post.date | date: "%m -%d -%Y" }}</span>
