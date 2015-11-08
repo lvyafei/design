@@ -16,6 +16,12 @@ published: true
         <img src="/design/images/雪佛兰/雪佛兰.png"><br/>
         <span>汽车标志-雪佛兰</span>
       </a>
+       {% for post in site.posts %}
+     <div class="art cat_{{ post.categories | first }} tag_{{ post.tags | first }}" style="border-left:5px #AA6708 solid;border-radius:3px;padding:10px;margin-bottom:5px;display:none">
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" target="_blank">{{ post.date | date: "%m-%d-%Y" }}-{{ post.title }}</a>
+      <span style="float:right"><i class="glyphicon glyphicon-paperclip"></i> {{ post.categories }} <i class="glyphicon glyphicon-tag"></i> {{ post.tags }}</span>
+     </div>
+     {% endfor %}
   </section>
 </div>
    
