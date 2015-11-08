@@ -5,20 +5,6 @@ layout: default
 
 <div class="post container">
   <div class="row">
-    <div class="col-md-3">
-       <div style="border:1px #AA6708 solid;border-left:5px #AA6708 solid;border-radius:3px;padding:20px">
-         <h3>Property</h3>
-         {% if page.categories != empty %}
-         <h5><i class="glyphicon glyphicon-paperclip"></i> <span> {{ page.categories }}</span></h5>
-         {% endif %}
-         {% if page.tags != empty %}
-         <h5><i class="glyphicon glyphicon-tag"></i> <span> {{ page.tags }}</span></h5>
-         {% endif %}
-         {% if page.author != empty %}
-         <h5><i class="glyphicon glyphicon-user"></i> <span> {{ page.author }}</span></h5>
-         {% endif %}
-       </div>
-    </div>
     <div class="col-md-9">
        <div class="well">
           <header class="post-header">
