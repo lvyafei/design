@@ -16,16 +16,9 @@ published: true
       <div>
         {% for post in site.posts %}
           <div class="well well-lg">
-            {% if post.categories != empty %}
-            <span class="post-meta"><i class="glyphicon glyphicon-paperclip"></i> {{ post.categories }}</span>
-            {% endif %}
-            {% if post.tags != empty %}
-            <span class="post-meta"><i class="glyphicon glyphicon-tag"></i> {{ post.tags }}</span>
-            {% endif %}
             <h2>
               <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             </h2>
-            <span>{{ post.excerpt | replace: '<ul id="meuid">' , '<ul id="meuid" style="display:none">' | remove: '<img>' }}
             </span>
             <span class="post-meta" style="float:right">{{ post.date | date: "%m -%d -%Y" }}</span>
           </div>

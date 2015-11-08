@@ -1,6 +1,6 @@
 # Site settings
 title: design
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/design" # the subpath of your site, e.g. /blog/
 url: "http://lvyafei.github.io/design/" # the base hostname & protocol for your site
 # Build settings
 markdown: kramdown
