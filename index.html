@@ -4,28 +4,36 @@ published: true
 ---
 
 <div class="home container">
-  <h1 class="project-name">Design</h1>
-  <h2 class="project-tagline">个人设计作品</h2>
-  <a href="https://github.com/lvyafei/design" class="btn">
-    <img src="/design/images/促销海报/促销海报.png"><br/>
-    <span>促销海报</span>
-  </a>
-  <div>
-    {% for post in site.posts %}
-      <div class="well well-lg">
-        {% if post.categories != empty %}
-        <span class="post-meta"><i class="glyphicon glyphicon-paperclip"></i> {{ post.categories }}</span>
-        {% endif %}
-        {% if post.tags != empty %}
-        <span class="post-meta"><i class="glyphicon glyphicon-tag"></i> {{ post.tags }}</span>
-        {% endif %}
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        <span>{{ post.excerpt | replace: '<ul id="meuid">' , '<ul id="meuid" style="display:none">' | remove: '<img>' }}
-        </span>
-        <span class="post-meta" style="float:right">{{ post.date | date: "%m -%d -%Y" }}</span>
+ <section class="page-header">
+      <h1 class="project-name">Design</h1>
+      <h2 class="project-tagline">个人设计作品</h2>
+      <a href="https://github.com/lvyafei/design" class="btn">
+        <img src="/design/images/促销海报/促销海报.png"><br/>
+        <span>促销海报</span>
+      </a>
+  </section>
+  <section class="main-content">
+      <div>
+        {% for post in site.posts %}
+          <div class="well well-lg">
+            {% if post.categories != empty %}
+            <span class="post-meta"><i class="glyphicon glyphicon-paperclip"></i> {{ post.categories }}</span>
+            {% endif %}
+            {% if post.tags != empty %}
+            <span class="post-meta"><i class="glyphicon glyphicon-tag"></i> {{ post.tags }}</span>
+            {% endif %}
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+            <span>{{ post.excerpt | replace: '<ul id="meuid">' , '<ul id="meuid" style="display:none">' | remove: '<img>' }}
+            </span>
+            <span class="post-meta" style="float:right">{{ post.date | date: "%m -%d -%Y" }}</span>
+          </div>
+        {% endfor %}
       </div>
-    {% endfor %}
-  </div>
+  </section>
 </div>
+   
+
+   
+
