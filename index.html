@@ -12,18 +12,6 @@ published: true
         <span>促销海报</span>
       </a>
   </section>
-  <section class="main-content">
-      <div>
-        {% for post in site.posts %}
-          <div>
-            <h2>
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-              <span class="post-meta" style="float:right">{{ post.date | date: "%m -%d -%Y" }}</span>
-            </h2>
-          </div>
-        {% endfor %}
-      </div>
-  </section>
 </div>
    
 
